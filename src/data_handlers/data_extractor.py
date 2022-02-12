@@ -6,7 +6,7 @@ class DataExtractor(IRepository):
 
     def fetch_db(self: object) -> pd.DataFrame:
         self.connect()
-        print('Extracting data from postgres. Please, wait...')
+        print(f'Extracting data from {self._database}. Please, wait...')
         df = pd.read_sql_table(self._database, con=self._engine)
         return df
 
