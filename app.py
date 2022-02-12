@@ -6,7 +6,6 @@ from src.config.config import DB_CONNECTION
 from src.data_handlers.data_nullable import DataNullable
 from src.manager.data_manager import DataManager
 
-
 data_classes = {'1': DataLoader, '2': DataExtractor}
 
 
@@ -27,4 +26,3 @@ if __name__ == '__main__':
 
     manager = DataManager(dataStrategy(config=DB_CONNECTION))
     df = manager.execute()
-    
